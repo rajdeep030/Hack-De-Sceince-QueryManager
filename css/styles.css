@@ -1,0 +1,57 @@
+
+
+.nav-link{
+    color: white !important;
+    }
+.backgrnd {
+       background-image: linear-gradient(to bottom, blueviolet,rgba(245, 246, 252, 0.52)),url(student.jpg); 
+       background-size: cover;
+       height:80vh;
+
+ }
+ .mid{
+     background-image:linear-gradient(to bottom,blueviolet,rgba(245, 246, 252, 0.52));
+     align-content: center;
+ }
+ .login{
+     z-index: 1;
+ }
+ .midhead {
+position: relative;
+align-content: center;
+color: white;
+font-weight: bold;
+font-size: 8vh;
+ }
+ .midpara {
+     color:white;
+     font-size: 3vh;
+ }
+
+ .btn{
+     border:  2px solid rgb(0,0,0) !important ;
+     padding: 10px 10px;
+ }
+
+ .btn:hover{
+     background: rgb(25,67,92);
+     color:#fff;
+ }
+
+ input{
+     border: 1px solid rgb(0,0,0);
+     padding: 5px;
+ }
+
+ textarea{
+    border: 1px solid rgb(0,0,0);
+    padding: 5px;
+ }
+
+select{
+    border: 1px solid rgb(0,0,0);
+}
+
+ .form-control{
+     margin: 20px 20px;
+ }
