@@ -177,13 +177,21 @@ $.ajax({
                for(let i=0;i<data.length;i++)
                {
                 tel = document.createElement('tr');
-                data[i].solved==="0"?
+                if(data[i].solved==='0'){
                 tel.innerHTML = `<td>${data[i].title}</td>
                 <td>${data[i].content}</td>
-                <td>Pending</td>`:
+                <td>Pending</td>`;
+                }else if(data[i].solved==='1'){
                 tel.innerHTML = `<td>${data[i].title}</td>
                 <td>${data[i].content}</td>
-                <td>Solved</td>`
+                <td>Solved</td>`;
+                }
+                else
+                {
+                  tel.innerHTML = `<td>${data[i].title}</td>
+                <td>${data[i].content}</td>
+                <td>In Queue</td>`;
+                }
                tbody.append(tel);
 
                }

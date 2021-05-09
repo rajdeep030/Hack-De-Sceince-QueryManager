@@ -18,12 +18,7 @@
           </svg>
           <span class="ml-3 text-xl">Student Grievances</span>
         </a>
-        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-          <a class="mr-5 hover:text-gray-900">About</a>
-          <a class="mr-5 hover:text-gray-900" href="admin.html">Admin Login</a>
-          <a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a>
-        </nav>
+       <?php require 'nav.php';?>
       </div>
     </header>
     <section class="text-gray-600 body-font relative">
