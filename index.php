@@ -14,7 +14,7 @@ session_start();
         Auth::logIn();
         $_SESSION['userid']=$id;
         $_SESSION['password']=$_POST['password'];
-        Url::redirect('/home.php');
+        Url::redirect('/home.php?id='.$id);
     }
     else
     {
@@ -31,12 +31,7 @@ session_start();
         </svg>
         <span class="ml-3 text-xl">Student Grievances</span>
       </a>
-      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-        <a class="mr-5 hover:text-gray-900">About</a>
-        <a class="mr-5 hover:text-gray-900" href="admin.html">Admin Login</a>
-        <a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a>
-      </nav>
+      <?php require 'nav.php'?>
     </div>
   </header>
 
@@ -70,6 +65,7 @@ session_start();
               <br>
               <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign-Up</button>
           </form>
+          <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="Annonymous.php">Go Annonymous</a></button>
         </div>
     </div>
   </section>

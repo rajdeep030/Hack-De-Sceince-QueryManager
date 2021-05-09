@@ -1,13 +1,6 @@
 <?php
-
-session_start();
 require "functions/load.php";
 $conn= require "functions/db.php";
-Auth::requireLogIn();
-if($_GET['id']!==$_SESSION['userid'])
-{
-  die("Unauthorized");
-}
 $errors = [];
 if($_SERVER["REQUEST_METHOD"]==="POST")
 {
@@ -26,14 +19,8 @@ if(count($errors)===0)
         $_POST['branch'] = 'Dean';
     }
     $problem = new Problem();
-    if($problem->addProblem($conn,$_POST['title'],$_POST['content'],$_GET['category'],$_GET['sub'],$_POST['branch'],$_SESSION['userid'])){
-        $user = ManageUser::getUser($conn,$_SESSION['userid']);
-        $email=$user->email;
-        $sub='Problem Uploaded';
-        $name=$user->username;
-        $body = 'Your Problem has been uploaded successfully.It will be resolved as soon as possible.Further updates will be communicated through your mail.';
-        require 'mail.php';
-        Url::redirect('/home.php?id='.$_SESSION['userid']);
+    if($problem->addProblem($conn,$_POST['title'],$_POST['content'],$_GET['category'],$_GET['sub'],$_POST['branch'],0)){
+        Url::redirect('/Annonymous.php');
     }
 }
 }
